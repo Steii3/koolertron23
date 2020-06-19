@@ -18,7 +18,7 @@
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
-    _FN
+    _MACRO
 };
 
 // Defines the keycodes used by our macros in process_record_user
@@ -30,17 +30,17 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [_BASE] = LAYOUT(
-        KC_A, KC_Z, KC_E, KC_R, KC_T ,KC_Y, \
-        KC_U, KC_I, KC_O, KC_P, KC_Q ,KC_S, \
-        KC_D, KC_F, KC_G, KC_H, KC_J ,KC_K, \
-        KC_L, KC_M, KC_W, KC_X, KC_C \
+        TO(0), TO(1), TO(2), BL_OFF, BL_DEC ,BL_INC, \
+        KC_KP_7, KC_KP_8, KC_KP_9, KC_NO, KC_NO ,KC_NO, \
+        KC_KP_4, KC_KP_5, KC_KP_6, KC_NO, KC_NO ,KC_NO, \
+        KC_KP_1, KC_KP_2, KC_KP_3, KC_KP_0, KC_ENTER \
 
     ), \
-    [_FN] = LAYOUT(
-        KC_A, KC_Z, KC_E, KC_R, KC_T ,KC_Y, \
-        KC_U, KC_I, KC_O, KC_P, KC_Q ,KC_S, \
-        KC_D, KC_F, KC_G, KC_H, KC_J ,KC_K, \
-        KC_L, KC_M, KC_W, KC_X, KC_C \
+    [_MACRO] = LAYOUT(
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS ,KC_TRNS, \
+        _______, _______, _______, _______, _______ ,_______, \
+        _______, _______, _______, _______, _______ ,_______, \
+        _______, _______, _______, _______, _______ \
     )
 };
 
